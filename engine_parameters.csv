@@ -1,0 +1,8 @@
+﻿parameter,variable name,value,unit
+ambient temp,T1,20,celsius
+exhaust temp,T4,720,celsius
+compression ratio,r,2.9,
+mass flow rate,m,0.23,kg/s
+actual exhaust power,Qoa,21.7,kW
+specific heat ratio,k,1.4,
+specific heat p,cp,1.005,kJ/kg*K
