@@ -1,11 +1,13 @@
 import pandas as pd
+import inspect
+import thermo
 
-data = pd.read_csv("engine_parameters.csv")
+# excel parameter data extraction
+df = pd.read_csv("engine_parameters.csv")
+data = dict(zip(df['variable name'], df['value']))
 
-
-parameters = data.loc[0:6, ['variable name', 'value']]
-
-
-parameters_dict = parameters.to_dict()
-print(type(parameters_dict))
-print(parameters_dict)
+# compressor work
+sig = inspect.signature(thermo.compressor_work)
+kwargs = {k: data[k] for k in sig.parameters.keys()}
+Wc = thermo.compressor_work(**kwargs)
+print(Wc)
