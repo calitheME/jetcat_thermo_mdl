@@ -27,12 +27,17 @@ def net_work(Wt, Wc):
     
     return WN
 
+def power_ratio(WN, Qoa):
+    PR = Qoa / WN
+    
+    return PR
+
 def wasted_energy(Qo, Qoa):
     Qw = Qo - Qoa
     
     return Qw
 
 def energy_ratio(Qo, Qoa):
-    E = Qoa / Qo
+    ER = Qoa / Qo
     
-    return E
+    return ER
