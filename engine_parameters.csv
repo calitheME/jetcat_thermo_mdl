@@ -1,33 +1,15 @@
-<<<<<<< HEAD
-﻿parameter,variable name,value,valueo,unit,temp K,cp
-ambient temp,T1,293.15,20,celsius,250,1.003
-exhaust temp,Te,993.15,720,celsius,300,1.005
-compression ratio,r,2.9,2.9,,350,1.008
-mass flow rate,m,0.23,0.23,kg/s,400,1.013
-jet power,Pj,21.7,21.7,kW,450,1.02
-specific heat ratio,k,1.4,1.4,,500,1.029
-specific heat p,cp,1.005,1.005,kJ/kg*K,550,1.04
-shaft eff,nshaft,0.9,0.9,,600,1.051
-heat eff,nheat,0.1,0.1,,650,1.063
-KE eff,nKE,0.7,0.7,,700,1.075
-,Ve,434.72,434.72,,750,1.087
-,,,,,800,1.099
-,,,,,900,1.121
-,,,,,1000,1.142
-=======
-﻿parameter,variable name,value,valueo,unit,temp K,cp
-ambient temp,T1,293.15,20,celsius,250,1.003
-exhaust temp,Te,993.15,720,celsius,300,1.005
-compression ratio,r,2.9,2.9,,350,1.008
-mass flow rate,m,0.23,0.23,kg/s,400,1.013
-jet power,Pj,21.7,21.7,kW,450,1.02
-specific heat ratio,k,1.4,1.4,,500,1.029
-specific heat p,cp,1.005,1.005,kJ/kg*K,550,1.04
-shaft eff,nshaft,0.9,0.9,,600,1.051
-heat eff,nheat,0.1,0.1,,650,1.063
-KE eff,nKE,0.7,0.7,,700,1.075
-,Ve,434.72,434.72,,750,1.087
-,,,,,800,1.099
-,,,,,900,1.121
-,,,,,1000,1.142
->>>>>>> c74ab8125a4277442c44145afae8cd3356082006
+﻿parameter,variable name,value,valueo,unit,temp K,cp,exit temp C,exit temp K
+ambient temp,T1,293.15,20,celsius,250,1.003,490,763.25
+exhaust temp,Te,993.15,720,celsius,300,1.005,500,773.25
+compression ratio,r,2.9,2.9,,350,1.008,520,793.25
+mass flow rate,m,0.23,0.23,kg/s,400,1.013,540,813.25
+jet power,Pj,21.7,21.7,kW,450,1.02,560,833.25
+specific heat ratio,k,1.4,1.4,,500,1.029,580,853.25
+specific heat p,cp,1.005,1.005,kJ/kg*K,550,1.04,600,873.25
+shaft eff,nshaft,0.9,0.9,,600,1.051,620,893.25
+heat eff,nheat,0.1,0.1,,650,1.063,640,913.25
+KE eff,nKE,0.7,0.7,,700,1.075,660,933.25
+,Ve,434.72,434.72,,750,1.087,680,953.25
+,,,,,800,1.099,700,973.25
+,,,,,900,1.121,720,993.25
+,,,,,1000,1.142,,

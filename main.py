@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 df = pd.read_csv("engine_parameters.csv")
 data = dict(zip(df['variable name'], df['value']))
 cpdata = dict(zip(df['temp K'], df['cp']))
+Tes = df['exit temp K'].tolist()
 calcs = {}
 
 # assumptions
@@ -80,7 +81,22 @@ print(f"Thermal efficiency: {nth:>10.2f}")
 methods = ['shaft', 'heat', 'KE']
 Wg = [Wgshaft, Wgheat, WgKE]
 plt.bar(methods, Wg)
-plt.title('Power Generation by Method')
-plt.xlabel('Method')
-plt.ylabel('Power (kW)')
+plt.title('Power Generation by Method', weight='bold')
+plt.xlabel('Method', weight='bold')
+plt.ylabel('Power (kW)', weight='bold')
+plt.show()
+
+# Exhaust temp parametric study
+Qos, nths = thermo.Te_para_study(Tes, T1, data['m'], data['cp'], Qi)
+# exhaust heat plot
+plt.plot(Tes, Qos)
+plt.title('Exhaust Heat vs. Exhaust Temperature', weight='bold')
+plt.xlabel('Exhaust Temperature (K)', weight='bold')
+plt.ylabel('Exhaust Heat (kW)', weight='bold')
+plt.show()
+# thermal efficiency plot
+plt.plot(Tes, nths)
+plt.title('Thermal Efficiency vs. Exhaust Temperature', weight='bold')
+plt.xlabel('Exhaust Temperature (K)', weight='bold')
+plt.ylabel('Thermal Efficiency', weight='bold')
 plt.show()

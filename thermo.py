@@ -70,3 +70,13 @@ def nth(WN, Qi):
     nth = WN / Qi
     
     return nth
+
+def Te_para_study(Tes, T1, m, cp, Qi):
+    Qos = []
+    nths = []
+    for Te in Tes:
+        Qo = m*cp*(Te-T1)
+        nth = 1 - Qo/Qi
+        Qos.append(Qo)
+        nths.append(nth)
+    return Qos, nths
